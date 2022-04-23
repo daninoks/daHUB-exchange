@@ -541,9 +541,11 @@ def main() -> None:
     dispatcher.add_handler(conv_handler)
 
     # Start the Bot
-    updater.start_polling()
+    # updater.start_polling()
     # Start by webhook:
     # updater.start_webhook()
+    updater.bot.setWebhook(
+        webhook_url='https://exchange.dahub.app/' + API_TOKEN)
     # Run the bot until the user presses Ctrl-C or the process receives SIGINT,
     # SIGTERM or SIGABRT
     updater.idle()
@@ -553,3 +555,19 @@ if __name__ == '__main__':
 
     up = UserPropeties()
     main()
+
+
+# def application(env, start_response):
+#     import sys
+#     import socket
+#     from datetime import date
+#     from string import Template
+#
+#     with open ("ROOT/index.py", "r") as index_file:
+#          data=index_file.read().replace('\n', '')
+#          index_object = Template(data)
+#          index_formated=index_object.substitute(mydate=date.today().year, hostname=socket.gethostname())
+#          if sys.version.split(' ')[0].split('.')[0] == '3':
+#             index_formated = index_formated.encode('utf-8')
+#     start_response('200 OK', [('Content-Type','text/html')])
+#     return [ index_formated  ]
