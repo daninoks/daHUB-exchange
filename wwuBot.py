@@ -553,6 +553,7 @@ def main() -> None:
     # Run the bot until the user presses Ctrl-C or the process receives SIGINT,
     # SIGTERM or SIGABRT
     updater.idle()
+    print('HELLO`')
 
 
 if __name__ == '__main__':

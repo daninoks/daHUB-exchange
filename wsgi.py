@@ -1,4 +1,4 @@
-import wwuBot.py as bot111
+import wwuBot as botBot
 
 
 def application(environ, start_response):
@@ -6,5 +6,8 @@ def application(environ, start_response):
     status = '200 OK'
     headers = [('Content-type', 'text/plain')]
     start_response(status, headers)
-    bot111.main()
+    botBot.main()
     return ['unicode stuff'.encode('utf-8')]
+
+
+# botBot.main()
