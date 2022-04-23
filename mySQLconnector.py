@@ -6,9 +6,9 @@ from mysql.connector import errorcode
 from token_generator import token_gen
 
 # Should be pulled from DBPROPERTY class  from config.py:
-DB_USER = 'nox'
-DB_PASS = 'Password12345!'
-DB_HOST = '127.0.0.1'
+DB_USER = 'root'   #'nox'
+DB_PASS = 'AOEesx13595'   #'Password12345!'
+DB_HOST = 'http://node186340-exchange.jelastic.regruhosting.ru'   #'127.0.0.1'
 DB_NAME = 'customers'
 
 databaseConfig = {'user': DB_USER,
