@@ -452,6 +452,9 @@ def dict_extractor(keysList):
 
 def main() -> None:
     """Run the bot."""
+
+    up = UserPropeties()
+
     # Create the Updater and pass it your bot's token:
     updater = Updater(API_TOKEN)
     # Get the dispatcher to register handlers:
@@ -544,8 +547,9 @@ def main() -> None:
     # updater.start_polling()
     # Start by webhook:
     # updater.start_webhook()
-    updater.bot.setWebhook(
-        webhook_url='https://exchange.dahub.app/' + API_TOKEN)
+    updater.bot.setWebhook(f"https://exchange.dahub.app/{API_TOKEN}")
+    # updater.bot.setWebhook()
+    # updater.set_webhook()
     # Run the bot until the user presses Ctrl-C or the process receives SIGINT,
     # SIGTERM or SIGABRT
     updater.idle()
@@ -553,7 +557,7 @@ def main() -> None:
 
 if __name__ == '__main__':
 
-    up = UserPropeties()
+    # up = UserPropeties()
     main()
 
 
