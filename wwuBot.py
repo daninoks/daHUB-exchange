@@ -547,8 +547,8 @@ def main() -> None:
     # updater.start_polling()
     # Start by webhook:
     # updater.start_webhook()
-    updater.bot.setWebhook(f"https://exchange.dahub.app/{API_TOKEN}")
-    # updater.bot.setWebhook()
+    # updater.bot.setWebhook(f"https://exchange.dahub.app/{API_TOKEN}")
+    updater.bot.setWebhook()
     # updater.set_webhook()
     # Run the bot until the user presses Ctrl-C or the process receives SIGINT,
     # SIGTERM or SIGABRT
